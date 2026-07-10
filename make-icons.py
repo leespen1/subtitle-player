@@ -83,12 +83,12 @@ def draw_icon(size, maskable=False):
     stroke = max(2, int(s * 0.02))
 
     # ---- TV: white rounded-rectangle outline with the app name inside ----
-    tv = [fx(0.09), fy(0.06), fx(0.91), fy(0.52)]
+    tv = [fx(0.05), fy(0.05), fx(0.95), fy(0.60)]
     d.rounded_rectangle(tv, radius=s * 0.03, outline=WHITE, width=stroke)
 
     lines = ["Subtitle", "Player"]
-    inner_w = (tv[2] - tv[0]) * 0.82
-    inner_h = (tv[3] - tv[1]) * 0.74
+    inner_w = (tv[2] - tv[0]) * 0.90
+    inner_h = (tv[3] - tv[1]) * 0.88
     font = fit_font(lines, inner_w, inner_h)
     asc, desc = font.getmetrics()
     line_h = asc + desc
@@ -100,7 +100,7 @@ def draw_icon(size, maskable=False):
         ty += line_h
 
     # ---- Phone: smaller rounded rectangle with amber subtitle squiggles ----
-    phone = [fx(0.30), fy(0.61), fx(0.70), fy(0.95)]
+    phone = [fx(0.31), fy(0.69), fx(0.69), fy(0.93)]
     d.rounded_rectangle(phone, radius=s * 0.035,
                         fill=PANEL, outline=WHITE, width=max(2, int(s * 0.016)))
     pw = phone[2] - phone[0]
