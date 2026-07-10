@@ -8,7 +8,7 @@
  * worker precaches fresh copies on install and deletes the old cache on
  * activate, which is what pushes an update out to already-installed clients.
  */
-const CACHE = "subtitle-player-v4";
+const CACHE = "subtitle-player-v5";
 
 const ASSETS = [
   ".",

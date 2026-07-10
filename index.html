@@ -228,7 +228,7 @@
     </div>
     <div id="bar">
       <button class="btn sync" id="back"><span>« 10s</span><small>REWIND</small></button>
-      <button class="btn" id="playBtn">► Play</button>
+      <button class="btn" id="playBtn">▶ Play</button>
       <button class="btn sync" id="fwd"><span>10s »</span><small>FORWARD</small></button>
     </div>
     <div id="offsetRow">
@@ -400,7 +400,7 @@ Source code:
     if (!playing) return;
     elapsed = now();
     playing = false;
-    playBtn.textContent = "► Play";
+    playBtn.textContent = "▶ Play";
     releaseWake();
     if (raf) cancelAnimationFrame(raf);
     render();
@@ -445,7 +445,7 @@ Source code:
       fname.textContent = f.name;
       elapsed = 0; offset = 0; playing = false;
       offsetVal.textContent = "0.0s";
-      playBtn.textContent = "► Play";
+      playBtn.textContent = "▶ Play";
       loader.style.display = "none";
       player.classList.add("active");
       render();
