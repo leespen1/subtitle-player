@@ -113,9 +113,10 @@
   #infoBtn:active { background: #2a241b; }
   #uiBtn {
     position: absolute; top: 12px; right: 64px; z-index: 5;
-    width: 44px; height: 44px; border-radius: 10px;
+    height: 44px; padding: 0 14px; border-radius: 10px;
     background: rgba(28,24,19,0.6); color: var(--amber-dim);
-    border: 1px solid var(--line); font-size: 20px; line-height: 1;
+    border: 1px solid var(--line);
+    font-size: 13px; font-weight: 600; letter-spacing: 0.04em; line-height: 1;
     display: flex; align-items: center; justify-content: center;
   }
   #uiBtn:active { background: #2a241b; }
@@ -235,7 +236,7 @@
 <div id="player">
   <div id="stage">
     <button id="infoBtn" aria-label="About and instructions">ℹ&#xFE0E;</button>
-    <button id="uiBtn" aria-label="Hide interface">⊟</button>
+    <button id="uiBtn" aria-label="Hide interface">Hide</button>
     <button id="fsBtn" aria-label="Toggle fullscreen">⛶</button>
     <div id="current"></div>
     <div id="next"></div>
@@ -509,7 +510,7 @@ Source code:
   var uiBtn = $("uiBtn");
   function setChromeHidden(hidden) {
     player.classList.toggle("chrome-hidden", hidden);
-    uiBtn.textContent = hidden ? "⊞" : "⊟";
+    uiBtn.textContent = hidden ? "Show" : "Hide";
     uiBtn.setAttribute("aria-label", hidden ? "Show interface" : "Hide interface");
   }
   uiBtn.addEventListener("click", function (e) {
