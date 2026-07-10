@@ -7,8 +7,14 @@ your browser; nothing is uploaded anywhere.
 
 **Live:** https://spencerlee.net/subtitle-player/
 
-The player itself is a single `index.html` with all CSS and JavaScript inline,
-so it can be hosted on any static host with no build step.
+I made this so I could watch movies on a TV while in another country that
+doesn't have English subtitles on their streaming platforms. There are many
+apps for overlaying subtitles onto a video on your computer or phone, but
+surprisingly I couldn't find a single one that handles *only subtitles.*
+
+It turns out that subtitle files are incredibly simple plaintext (*as they
+should be!*), so it was very simple to make a subtitle player using a small
+amount of HTML/JavaScript, which can be hosted on a static site.
 
 ## Install as an app (PWA)
 
