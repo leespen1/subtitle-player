@@ -1,6 +1,6 @@
 {
   "name": "Subtitle Player",
-  "short_name": "Subtitles",
+  "short_name": "Subtitle Player",
   "description": "Read movie subtitles on your phone while the film plays on a TV. Load an .srt or .vtt file, press play, and nudge the sync to match.",
   "start_url": ".",
   "scope": ".",
