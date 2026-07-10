@@ -72,7 +72,7 @@ def draw_icon(size, maskable=False):
     # inner 80%); the plain icon gets a rounded-square badge instead.
     if maskable:
         d.rectangle([0, 0, s, s], fill=BG)
-        m = 0.11 * s        # keep the artwork inside the maskable safe zone
+        m = 0.16 * s        # keep the artwork inside the maskable safe circle
     else:
         d.rounded_rectangle([0, 0, s - 1, s - 1], radius=s * 0.22, fill=BG)
         m = 0.0
@@ -83,7 +83,7 @@ def draw_icon(size, maskable=False):
     stroke = max(2, int(s * 0.02))
 
     # ---- TV: white rounded-rectangle outline with the app name inside ----
-    tv = [fx(0.05), fy(0.05), fx(0.95), fy(0.60)]
+    tv = [fx(0.075), fy(0.09), fx(0.925), fy(0.62)]
     d.rounded_rectangle(tv, radius=s * 0.03, outline=WHITE, width=stroke)
 
     lines = ["Subtitle", "Player"]
@@ -112,7 +112,7 @@ def draw_icon(size, maskable=False):
     amp = ph * 0.045
     wl = pw * 0.30
     for i, frac in enumerate((1.0, 0.72, 0.52)):
-        y = phone[1] + ph * (0.36 + i * 0.22)
+        y = phone[1] + ph * (0.28 + i * 0.22)
         squiggle(d, left, left + (right - left) * frac, y, amp, wl, sq_w, AMBER)
 
     return img.resize((size, size), Image.LANCZOS)
